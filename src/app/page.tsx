@@ -109,7 +109,7 @@ export default function Home() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                 >
-                  <div className="bg-white text-gray-900 rounded-xl shadow-xl max-w-lg w-full p-6 relative">
+                  <div className="bg-black  rounded-xl shadow-xl max-w-lg w-full p-6 relative">
                     {/* Close button */}
                     <button
                       onClick={() => setIsOpen(false)}
@@ -118,33 +118,33 @@ export default function Home() {
                       ✕
                     </button>
 
-                    <div className="w-fit gap-[10px] flex  flex-col  pr-[50px]">
-                      <a href="" className="flex flex-row">
-                        Who We Are <HelpIcon />
+                    <div className="w-fit gap-[10px] flex  flex-col  pr-[50px] text-white">
+                      <a href="" className="flex flex-row hover:text-[#82A67D]">
+                        <u>Who We Are</u>
                       </a>
-                      ||
-                      <a href="" className="flex flex-row">
-                        What We Do <HelpIcon />
+
+                      <a href="" className="flex flex-row hover:text-[#82A67D]">
+                        <u>What We Do</u>
                       </a>
-                      ||
-                      <a href="" className="flex flex-row">
-                        Industries <HelpIcon />
+
+                      <a href="" className="flex flex-row hover:text-[#82A67D]">
+                        <u>Industries</u>
                       </a>
-                      ||
-                      <a href="" className="flex flex-row">
-                        Resources <HelpIcon />
+
+                      <a href="" className="flex flex-row hover:text-[#82A67D]">
+                        <u>Resources</u>
                       </a>
-                      ||
-                      <a href="" className="flex flex-row">
-                        Careers <HelpIcon />
+
+                      <a href="" className="flex flex-row hover:text-[#82A67D]">
+                        <u>Careers</u>
                       </a>
-                      ||
-                      <a href="" className="flex flex-row">
-                        Press <HelpIcon />
+
+                      <a href="" className="flex flex-row hover:text-[#82A67D]">
+                        <u>Press</u>
                       </a>
-                      ||
-                      <a href="" className="flex flex-row">
-                        Contact <HelpIcon />
+
+                      <a href="" className="flex flex-row hover:text-[#82A67D]">
+                        <u>Contact</u>
                       </a>
                     </div>
                   </div>
@@ -153,21 +153,38 @@ export default function Home() {
             )}
           </AnimatedSection>
 
-          <div className="w-fit right-0 top-0 absolute gap-[10px] hidden md:flex flex-col md:flex-row pr-[50px]">
-            <a href="">Who We Are</a>
-            ||
-            <a href="">What We Do</a>
-            ||
-            <a href="">Industries</a>
-            ||
-            <a href="">Resources</a>
-            ||
-            <a href="">Careers</a>
-            ||
-            <a href="">Press</a>
-            ||
-            <a href="">Contact</a>
+          <div className="w-full bg-black   top-0 fixed  hidden md:flex md:flex-row-reverse pr-[10px]">
+            <div className="w-fit flex gap-[10px] py-[20px]">
+              <a className="hover:text-[#62A67D]" href="">
+                Who We Are
+              </a>
+              ||
+              <a className="hover:text-[#62A67D]" href="">
+                What We Do
+              </a>
+              ||
+              <a className="hover:text-[#62A67D]" href="">
+                Industries
+              </a>
+              ||
+              <a className="hover:text-[#62A67D]" href="">
+                Resources
+              </a>
+              ||
+              <a className="hover:text-[#62A67D]" href="">
+                Careers
+              </a>
+              ||
+              <a className="hover:text-[#62A67D]" href="">
+                Press
+              </a>
+              ||
+              <a className="hover:text-[#62A67D]" href="">
+                Contact
+              </a>
+            </div>
           </div>
+
           <div className="w-[10%] md:hidden">
             <Image src={cloudSync} alt="Secure" />
           </div>
@@ -195,7 +212,6 @@ export default function Home() {
           </AnimatedSection>
         </div>
       </section>
-
       {/* SECTION 2 */}
       <section className="flex flex-col md:flex-row w-full justify-center items-center gap-10 md:px-24 mb-20">
         <AnimatedSection direction="right" duration={0.9}>
@@ -225,7 +241,6 @@ export default function Home() {
           </div>
         </AnimatedSection>
       </section>
-
       {/* SECTION 3 */}
       <section className="flex flex-col md:flex-row-reverse w-full justify-center items-center gap-10 md:px-24 mb-20">
         <AnimatedSection direction="up" duration={0.8}>
@@ -251,10 +266,58 @@ export default function Home() {
           </div>
         </AnimatedSection>
       </section>
+      <fieldset className="text-black flex  w-[60%] md:pl-[70px] p-[20px] justify-center">
+        <div className="w-fit flex flex-col gap-[40px]">
+          <legend>Personal Info</legend>
+          <p className="w-fit">
+            <label>First name:</label>
+            <input
+              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="kennedy"
+              autoComplete="on"
+              required
+            />
+          </p>
+          <p className="w-fit">
+            <label>Last name:</label>
+            <input
+              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Anthony"
+              autoComplete="on"
+              required
+            />
+          </p>
+          <p className="w-fit">
+            <label>Email:</label>
+            <input
+              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@gmail.com"
+              required
+            />
+          </p>
 
-      <button className="w-fit px-[20px] py-[20px] text-sm rounded-[50px] border border-gradient-to-r from-blue-500 via-green-400 to-yellow-400 text-black">
-        Start now
-      </button>
+          <p className="w-fit">
+            <label>Phone Number:</label>
+            <input
+              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              type="tel"
+              name="phoneNumber"
+              id="phoneNumber"
+              placeholder="+234 807 987 3814"
+              required
+            />
+          </p>
+        </div>
+      </fieldset>
     </div>
   );
 }
