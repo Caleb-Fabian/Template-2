@@ -5,10 +5,18 @@ import {
   GTArrowIcon,
   ShieldIcon,
   HelpIcon,
+  Message,
+  CallIcon,
+  Instagram,
+  Twitter,
+  TikTok,
+  Facebook,
+  LinkedIn,
 } from "@/assets/icons";
 import cloudSync from "@/assets/images/dashboard-images/cloud sync.png";
 import Image from "next/image";
 import CEO from "@/assets/gif/ceo-gif.gif";
+import BetSmart from "@/assets/images/betting-img/betting-logo.jpg";
 import Interactions from "@/assets/gif/interaction.webp";
 import CustomerService from "@/assets/gif/customer-service.gif";
 import "aos/dist/aos.css";
@@ -156,7 +164,7 @@ export default function Home() {
             )}
           </AnimatedSection>
 
-          <div className="w-full bg-black   top-0 fixed  hidden md:flex md:flex-row-reverse pr-[10px]">
+          <div className="w-full bg-black/40   top-0 fixed  hidden md:flex md:flex-row-reverse pr-[10px]">
             <div className="w-fit flex gap-[10px] py-[20px]">
               <a className="hover:text-[#62A67D]" href="about-us">
                 Who We Are
@@ -200,7 +208,7 @@ export default function Home() {
               <h2 className="text-black text-[10px] md:text-[20px] my-2">
                 Company subtitle or tagline that gives the company meaning...
               </h2>
-              <button className="relative inline-flex w-fit items-center justify-center p-[2px] overflow-hidden rounded-lg bg-gradient-to-r from-[#82A67D] via-gray-300 to-[#82A67D] hover:from-green-300 hover:via-white hover:to-green-300 transition-all duration-1000">
+              <button className="inline-flex w-fit items-center justify-center p-[2px] overflow-hidden rounded-lg bg-gradient-to-r from-[#82A67D] via-gray-300 to-[#82A67D] hover:from-green-300 hover:via-white hover:to-green-300 transition-all duration-1000">
                 <span className="text-white bg-black text-[10px] md:text-[20px] px-8 py-3 rounded-md">
                   Let&apos;s get started
                 </span>
@@ -269,13 +277,13 @@ export default function Home() {
           </div>
         </AnimatedSection>
       </section>
-      <fieldset className="text-black flex  w-[60%] md:pl-[70px] p-[20px] justify-center">
-        <div className="w-fit flex flex-col gap-[40px]">
-          <legend className="font-bold">Personal Info</legend>
+      <fieldset className="text-gray-600 flex  w-[60%] md:pl-[70px] p-[20px] justify-center">
+        <div className="w-fit flex flex-col gap-[40px] border border-gray-600 px-[10px] py-[60px] rounded-[20px]">
+          <legend className="font-bold">Sign In</legend>
           <p className="w-fit">
             <label>First name:</label>
             <input
-              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
               type="text"
               name="firstName"
               id="firstName"
@@ -287,7 +295,7 @@ export default function Home() {
           <p className="w-fit">
             <label>Last name:</label>
             <input
-              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
               type="text"
               name="lastName"
               id="lastName"
@@ -299,7 +307,7 @@ export default function Home() {
           <p className="w-fit">
             <label>Email:</label>
             <input
-              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
               type="email"
               name="email"
               id="email"
@@ -311,7 +319,7 @@ export default function Home() {
           <p className="w-fit">
             <label>Phone Number:</label>
             <input
-              className="border border-black p-[2px] rounded-sm ml-[5px]"
+              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
               type="tel"
               name="phoneNumber"
               id="phoneNumber"
@@ -319,8 +327,81 @@ export default function Home() {
               required
             />
           </p>
+          <button className="border border-gray-600 w-fit p-2 rounded-md">
+            Sign In
+          </button>
         </div>
       </fieldset>
+      <div className="bg-gray-400 gap-[20px] w-full h-fit py-[50px] px-[20px] flex text-white flex-col md:flex-row">
+        <div className="flex flex-col gap-[5px] md:w-[25%]">
+          <div className="w-[100px] h-[100px]">
+            <Image src={BetSmart} alt="ceo" />
+          </div>
+          <h1 className="font-bold text-[20px] w-fit">Bet Smart </h1>
+          <p className="">
+            87 Lekki-Epe Expressway Street Off Ogunmode Road, Ikeja, Lagos,
+            Nigeria
+          </p>
+        </div>
+        <div className="flex flex-col gap-[5px] md:w-[25%] ">
+          <h1 className="font-bold text-[20px] w-fit">Home</h1>
+          <a href="home" className="hover:text-gray-200 w-fit">
+            Home
+          </a>
+          <a href="home" className="hover:text-gray-200 w-fit">
+            blog
+          </a>
+        </div>
+        <div className="flex flex-col gap-[5px] md:w-[25%] ">
+          <h1 className="font-bold text-[20px] w-fit">What we do</h1>
+          <a href="" className="hover:text-gray-200 w-fit">
+            {" "}
+            About us
+          </a>
+          <a href="" className="hover:text-gray-200 w-fit">
+            Team
+          </a>
+        </div>
+        <div className="flex flex-col gap-[5px] md:w-[25%] ">
+          <h1 className="font-bold text-[20px] w-fit">System</h1>
+          <a href="" className="hover:text-gray-200 w-fit">
+            FAQs
+          </a>
+          <a href="" className="hover:text-gray-200 w-fit">
+            Support
+          </a>
+          <h1 className="font-bold text-[20px] w-fit">Contact Us</h1>
+          <a
+            href="mailto:ifedinezicaleb@gmail.com"
+            className="hover:text-gray-200 w-fit flex flex-row"
+          >
+            <Message /> ifedinezicaleb@gmail.com
+          </a>
+          <a
+            href="tel:+2348079873814"
+            className="hover:text-gray-200 w-fit flex flex-row"
+          >
+            <CallIcon /> 08079873814
+          </a>
+          <div className=" w-fit flex flex-row gap-[10px]">
+            <a href="" className="hover:text-gray-200 w-fit">
+              <Instagram />
+            </a>
+            <a href="" className="hover:text-gray-200 w-fit">
+              <Twitter />
+            </a>
+            <a href="" className="hover:text-gray-200 w-fit">
+              <TikTok />
+            </a>
+            <a href="" className="hover:text-gray-200 w-fit">
+              <Facebook />
+            </a>
+            <a href="" className="hover:text-gray-200 w-fit">
+              <LinkedIn />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
