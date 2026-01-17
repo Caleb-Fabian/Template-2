@@ -18,7 +18,7 @@ export default function Login() {
       <fieldset className="md:w-[50%] w-full justify-center items-center md:items-start h-full flex gap-5 flex-col">
         <h1 className="text-4xl">Log in</h1>
         <p className="flex flex-row gap-3 text-gray-400">
-          Don't have an account?
+          Don&apos;t have an account?
           <span className="text-black hover:cursor-pointer">
             <u onClick={handleClick}> Sign up</u>
           </span>
