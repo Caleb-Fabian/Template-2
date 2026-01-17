@@ -24,6 +24,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // Utility component for reusability
 const AnimatedSection = ({
@@ -83,6 +84,10 @@ const AnimatedSection = ({
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/login`);
+  };
   return (
     <div className="h-full w-full flex flex-col bg-gradient-to-b from-white via-gray-300 to-white">
       {/* HERO SECTION */}
@@ -208,7 +213,10 @@ export default function Home() {
               <h2 className="text-black text-[10px] md:text-[20px] my-2">
                 Company subtitle or tagline that gives the company meaning...
               </h2>
-              <button className="inline-flex w-fit items-center justify-center p-[2px] overflow-hidden rounded-lg bg-gradient-to-r from-[#82A67D] via-gray-300 to-[#82A67D] hover:from-green-300 hover:via-white hover:to-green-300 transition-all duration-1000">
+              <button
+                className="inline-flex w-fit items-center justify-center p-[2px] overflow-hidden rounded-lg bg-gradient-to-r cursor-pointer from-[#82A67D] via-gray-300 to-[#82A67D] hover:from-green-300 hover:via-white hover:to-green-300 transition-all duration-1000"
+                onClick={handleClick}
+              >
                 <span className="text-white bg-black text-[10px] md:text-[20px] px-8 py-3 rounded-md">
                   Let&apos;s get started
                 </span>
@@ -277,61 +285,7 @@ export default function Home() {
           </div>
         </AnimatedSection>
       </section>
-      <fieldset className="text-gray-600 flex  w-[60%] md:pl-[70px] p-[20px] justify-center">
-        <div className="w-fit flex flex-col gap-[40px] border border-gray-600 px-[10px] py-[60px] rounded-[20px]">
-          <legend className="font-bold">Sign In</legend>
-          <p className="w-fit">
-            <label>First name:</label>
-            <input
-              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
-              type="text"
-              name="firstName"
-              id="firstName"
-              placeholder="kennedy"
-              autoComplete="on"
-              required
-            />
-          </p>
-          <p className="w-fit">
-            <label>Last name:</label>
-            <input
-              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
-              type="text"
-              name="lastName"
-              id="lastName"
-              placeholder="Anthony"
-              autoComplete="on"
-              required
-            />
-          </p>
-          <p className="w-fit">
-            <label>Email:</label>
-            <input
-              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="example@gmail.com"
-              required
-            />
-          </p>
 
-          <p className="w-fit">
-            <label>Phone Number:</label>
-            <input
-              className="border border-gray-600 p-[2px] rounded-sm ml-[5px]"
-              type="tel"
-              name="phoneNumber"
-              id="phoneNumber"
-              placeholder="+234 807 987 3814"
-              required
-            />
-          </p>
-          <button className="border border-gray-600 w-fit p-2 rounded-md">
-            Sign In
-          </button>
-        </div>
-      </fieldset>
       <div className="bg-gray-400 gap-[20px] w-full h-fit py-[50px] px-[20px] flex text-white flex-col md:flex-row">
         <div className="flex flex-col gap-[5px] md:w-[25%]">
           <div className="w-[100px] h-[100px]">
